@@ -7,7 +7,7 @@
     $HOME
 \*------------------------------------*/
 
-.home-section {
+.home-section-2 {
 	width: 100%;
 	@include media-query-bp($bp3) {
 			@include flexbox;
