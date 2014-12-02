@@ -1,0 +1,77 @@
+
+
+
+
+
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+
+.home-section {
+	width: 100%;
+	@include media-query-bp($bp3) {
+			@include flexbox;
+		}
+}
+	.home-review {
+		position: relative;
+		width: 100%;
+		@include media-query-bp($bp3) {
+			@include flex(1,1,50%);
+			&:last-child {
+				margin-left: $gutterwidth;
+			}
+		}
+	}
+
+		.legend {
+			position: absolute;
+			top: $gutterwidth;
+			left: $gutterwidth;
+			bottom: $gutterwidth;
+			width: 300px;
+			padding: $gutterwidth / 2;
+			background-color: $white;
+
+			h2 {
+				font-weight: normal;
+				text-align: left;
+			}
+			p {
+				@include font-size(12);
+				line-height: 1;
+			}
+			.btn {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+			}
+		}
+
+.author-block {
+	@include media-query-bp($bp3) {
+		@include flexbox;
+		@include align-items(stretch);
+	}
+}
+	.author__single {
+		@include media-query-bp($bp3) {
+			@include flexbox;
+			@include flex-direction(column);
+			@include flex(1,1,140px);
+			margin: 0 ($gutterwidth / 2);
+			text-align: center;
+		}
+		
+	}
+		.author__avatar {
+			text-align: center;
+			img {
+				@extend .img--circle;
+			}
+		}
+
+		.author__description {
+			@include font-size(12);
+			@include flex(1,1,auto);
+		}
